@@ -43,5 +43,5 @@ var obj = JSON.parse(body);
 var title =flags.get(obj['countryCode']) + ' '+City_ValidCheck(obj['regionName']) + ' '+ City_ValidCheck(obj['city']);
 var subtitle = ISP_ValidCheck(obj['org']);
 var ip = obj['query'];
-var description = ' Isp:'+obj['isp'] + '\n'+'Region:' +City_ValidCheck(obj['regionName'])+ '\n' + 'IP:'+ obj['query'] + '\n' +'Timezoon:'+ obj['timezone'] + '\n' +'AS:'+ obj['as'] + '\n' +'Lat:'+ obj['lat'] + '\n' +'Lon:'+ obj['lon'] + '\n' +'Org:'+ obj['org'];
+var description = ' Isp:'+obj['isp'] + '\n'+'Region:' +City_ValidCheck(obj['regionName']) + '\n' +'City:'+ obj['city'] + '\n' + 'IP:'+ obj['query'] + '\n' +'Timezoon:'+ obj['timezone'] + '\n' +'AS:'+ obj['as'] + '\n' +'Lat:'+ obj['lat'] + '\n' +'Lon:'+ obj['lon'] + '\n' +'Org:'+ obj['org'];
 $done({title, subtitle, ip, description});
